@@ -1,6 +1,6 @@
 findApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$sceDelegateProvider','URL', function($routeProvider, $locationProvider, $controllerProvider, $sceDelegateProvider,URL) {
     // remember mentioned function for later use
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
     findApp.registerCtrl = $controllerProvider.register;
     findApp.resolveScriptDeps = function(dependencies) {
         return function($q, $rootScope) {
