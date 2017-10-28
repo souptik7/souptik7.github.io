@@ -15,11 +15,7 @@ findApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$
     };
     // $locationProvider.hashPrefix('');
     var hostName = URL.getURL(window.location.hostname).serviceURL;
-    if(hostName == "localhost"){
-        URL.baseURL = window.location.protocol +"//"+ window.location.hostname+'/souptik7.github.io/FEproblem1/';
-    } else {
-        URL.baseURL = 'https://github.com/souptik7/souptik7.github.io/tree/master/FEproblem1/';
-    }
+    URL.baseURL = window.location.protocol +"//"+ window.location.hostname+'/souptik7.github.io/FEproblem1/';
     $routeProvider.when('/', {
         templateUrl: URL.baseURL+'partials/homepage-v0.0.1.html',
         css: URL.baseURL+'css/homepage-v0.0.1.css'
