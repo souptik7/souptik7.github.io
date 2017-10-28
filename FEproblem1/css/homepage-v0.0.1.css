@@ -15,8 +15,11 @@
 		margin-left: 16%;
 	}
 }
-.col-lg-offset h3 {
+.search-container h3 {
 	font-size: 22px;
+    color: #627978;
+}
+.search-container span {
     color: #627978;
 }
 .mar-top-20 {
@@ -30,6 +33,5 @@
     color: #797979;
     outline: none;
     cursor: pointer;
-    background: #ececec  url(../images/Dropdown-yellow.png) no-repeat 95% 56%;
-    background-size: 20px;
+    margin: 10px 0;
 }

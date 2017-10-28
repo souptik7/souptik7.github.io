@@ -1,8 +1,14 @@
 <div class="search-container box-shadow col-lg-10 col-md-11 col-11 floatl pad0">
-	<div class="col-lg-8 col-lg-offset col-md-12 col-12 floatl text-center">
-		<h3>Select planets you want to search in :</h3>
+	<div class="col-lg-12 col-md-12 col-12 floatl text-center">
+		<h3 class="search-container-h3">Select planets you want to search in :</h3>
 		<form name="searchForm" id="searchForm" ng-submit="searchForm.$valid && findFalcone()" novalidate accessible-form>
-			
+			<div class="col-lg-3 col-md-3 col-12 floatl text-left mar-top-20" ng-repeat="item in [].constructor(4) track by $index">
+				<span>Destination {{$index+1}}</span>
+				<select ng-model="find.planet[$index]" class="search-select" ng-change="sortArray($index)">
+					<option disabled selected value="">Select</option>
+					<option ng-repeat="planet in planets[$index]" value={{planet}}>{{planet.name}}</option>
+				</select>
+			</div>
 		</form>
 	</div>
 </div>
