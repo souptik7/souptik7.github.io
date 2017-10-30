@@ -34,12 +34,14 @@ findApp.controller('mainController', function($scope, $http, $window, $location,
 
     $scope.load = function(){
         $rootScope.loading = true;
+        $scope.tokenError = false;
         $scope.find = {};
         $scope.find.planet = [];
         $scope.find.vehicle = [];
         $scope.vehiclesRadio = [];
         $scope.oldModal = [];
         $scope.oldModalKey = [];
+        $rootScope.totalTime = 0;
         for(var i=0;i<4;i++){
             var tempObj = {
                 "name":"vehicle"+i,
@@ -58,7 +60,7 @@ findApp.controller('mainController', function($scope, $http, $window, $location,
                 'Accept':'application/json'
             }
         }).then(function(data){
-            $scope.token = data.token;
+            $scope.token = data.data.token;
         });
         $http.get($scope.serivceURL + 'planets')
         .then(function(data){
@@ -119,7 +121,48 @@ findApp.controller('mainController', function($scope, $http, $window, $location,
     }
 
     function computeTime(){
-        
+        $rootScope.totalTime = 0;
+        for(var i=0;i<4;i++){
+            if($scope.find.planet[i] != undefined && $scope.find.vehicle[i] != undefined){ 
+                var distance;
+                var speed;
+                distance = JSON.parse($scope.find.planet[i]).distance;
+                for(var j=0;j<4;j++){
+                    if($scope.find.vehicle[i] == $scope.vehicles[i][j].name){
+                        speed = $scope.vehicles[i][j].speed;
+                    }
+                }
+                $rootScope.totalTime = $rootScope.totalTime + (distance/speed);
+            }
+        }
+    }
+    $scope.findFalcone = function(){
+        var planetArr = [];
+        var vehicleArr = [];
+        for(var i=0;i<4;i++){
+            planetArr.push(JSON.parse($scope.find.planet[i]).name);
+            vehicleArr.push($scope.find.vehicle[i]);
+        }
+        $rootScope.loading = true;
+        var data = {
+            "token":$scope.token,
+            "planet_names":planetArr,
+            "vehicle_names":vehicleArr
+        };
+        data = JSON.stringify(data);
+        $http.post($scope.serivceURL + 'find', data, {
+            headers:{
+                'Accept':'application/json',
+                'Content-type':'application/json'
+            }
+        }).then(function(data){
+            $rootScope.resultData = data.data;
+            $rootScope.loading = false;
+            $location.path('/result');
+        }).catch(function(data){
+            $scope.tokenError = true;
+            $rootScope.loading = false;
+        });
     }
 
 });

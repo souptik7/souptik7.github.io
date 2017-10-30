@@ -1,0 +1,11 @@
+<div class="search-container box-shadow col-lg-10 col-md-11 col-11 floatl pad0">
+	<div class="col-lg-12 col-md-12 col-12 floatl mar-top-100 text-center">
+		<h3 ng-if="resultData.status == 'success'">Success! Congratulations on finding Falcone ! King Shan is mightly pleased.<br>Time taken: {{totalTime}}<br>Planet found: {{resultData.planet_name}}</h3>
+		<h3 ng-if="resultData.status == 'false'">You have failed in finding Falcone ! King Shan is highly disappointed.</h3>
+	</div>
+	<div class="col-lg-12 col-md-12 col-12 floatl text-left pad0" ng-class="{'button-div':screenSize != 'mobile'}">
+		<div class="col-lg-12 col-md-12 col-12 floatl text-center">
+			<button value="submit" class="main-button" ng-click="gotoHomePage()">Play Again</button>
+		</div>
+	</div>
+</div>

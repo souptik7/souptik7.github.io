@@ -85,3 +85,14 @@ input[type=radio] {
 .disabled-label {
     opacity: 0.5
 }
+.button-div {
+    position: absolute;
+    top: 325px;
+}
+.search-container2-h3 {
+    font-size: 18px;
+}
+.errorCode {
+    font-size: 14px;
+    color: #bd4931;
+}
