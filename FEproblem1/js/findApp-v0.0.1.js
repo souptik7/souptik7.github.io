@@ -32,6 +32,11 @@ findApp.controller('mainController', function($scope, $http, $window, $location,
 
     $scope.serivceURL = URL.serivceURL;
 
+    $scope.reset = function(){
+        $scope.load();
+        $location.path('/');
+    }
+
     $scope.load = function(){
         $rootScope.loading = true;
         $scope.tokenError = false;
