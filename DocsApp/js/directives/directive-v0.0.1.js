@@ -4,11 +4,6 @@ docsApp.directive("headerDirective", function(URL) {
         templateUrl: URL.baseURL+"partials/header-v0.0.1.html"
     };
 });
-docsApp.directive("footerDirective", function(URL) {
-    return {
-        templateUrl: URL.baseURL+"partials/footer-v0.0.1.html"
-    };
-});
 
 /*modal directive*/
 docsApp.directive('modalDialog', function() {
