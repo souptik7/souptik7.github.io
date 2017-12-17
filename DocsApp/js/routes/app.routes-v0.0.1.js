@@ -19,10 +19,10 @@ docsApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$
     URL.serivceURL = 'http://www.personalityforge.com/api/chat/';
     $routeProvider.when('/', {
         templateUrl: URL.baseURL+'partials/homepage-v0.0.1.html',
-        controller: 'chatController',
+        controller: 'loginController',
         css: URL.baseURL+'css/homepage-v0.0.1.css',
         resolve: {
-            deps: docsApp.resolveScriptDeps([URL.baseURL+'js/controllers/chatbox-v0.0.1.js'])
+            deps: docsApp.resolveScriptDeps([URL.baseURL+'js/controllers/login-v0.0.1.js'])
         }
     }).when('/login', {
         templateUrl: URL.baseURL+'partials/login-v0.0.1.html',
@@ -30,6 +30,13 @@ docsApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$
         css: URL.baseURL+'css/login-v0.0.1.css',
         resolve: {
             deps: docsApp.resolveScriptDeps([URL.baseURL+'js/controllers/login-v0.0.1.js'])
+        }
+    }).when('/chat', {
+        templateUrl: URL.baseURL+'partials/chat-v0.0.1.html',
+        controller: 'chatController',
+        css: URL.baseURL+'css/chat-v0.0.1.css',
+        resolve: {
+            deps: docsApp.resolveScriptDeps([URL.baseURL+'js/controllers/chatbox-v0.0.1.js'])
         }
     }).otherwise({
         redirectTo : '/'

@@ -12,8 +12,10 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     }
     
     $scope.serivceURL = URL.serivceURL;
-    $scope.loggedIn = window.localStorage.loggedIn!=undefined?window.localStorage.loggedIn:false;
-
+    $scope.loggedIn = window.sessionStorage.loggedIn!=undefined?window.sessionStorage.loggedIn:false;
+    $scope.chatBotID = '63906';
+    $scope.apiKey = '6nt5d1nJHkqbkphe';
+    // $location.path('/chat');
     if($scope.screenSize == 'mobile'){
         $location.path('/login');
     }
