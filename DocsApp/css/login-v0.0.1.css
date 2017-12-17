@@ -1,6 +1,6 @@
 .loginDiv {
-	width: 75%;
-    margin-left: 15%;
+	width: 85%;
+    margin-left: 8%;
     top: 15%;
     position: fixed;
     text-align: center;
@@ -9,7 +9,7 @@
     color: black;
     padding-bottom: 10px;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 26px;
     line-height: 20px;
     margin: 25px 0;
     text-align: center;
