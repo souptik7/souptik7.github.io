@@ -1,7 +1,4 @@
 var docsApp = angular.module("docsApp", ["ngRoute","angularCSS"]);
-docsApp.config(function($httpProvider) {
-    $httpProvider.defaults.withCredentials = true;
-});
 docsApp.controller('mainController', function($scope, $http, $location, URL, $rootScope) {
     
     $scope.baseURL = URL.baseURL;
@@ -15,8 +12,8 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     }
     
     $scope.serivceURL = URL.serivceURL;
-    // $scope.loggedIn = window.localStorage.userData!=undefined?window.localStorage.loggedIn:false;
-    $scope.loggedIn = true;
+    $scope.loggedIn = window.localStorage.userData!=undefined?true:false;
+    // $scope.loggedIn = true;
     $scope.chatBotID = '63906';
     $scope.externalID = 'chirag1';
     $scope.apiKey = '6nt5d1nJHkqbkphe';
