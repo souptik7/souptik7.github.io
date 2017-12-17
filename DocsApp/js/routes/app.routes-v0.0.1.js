@@ -1,5 +1,5 @@
 docsApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$sceDelegateProvider','URL', function($routeProvider, $locationProvider, $controllerProvider, $sceDelegateProvider,URL) {
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
     docsApp.registerCtrl = $controllerProvider.register;
     docsApp.resolveScriptDeps = function(dependencies) {
         return function($q, $rootScope) {

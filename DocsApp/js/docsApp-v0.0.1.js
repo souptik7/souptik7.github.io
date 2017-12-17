@@ -10,7 +10,7 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     } else {
         $scope.screenSize = 'laptop';
     }
-
+    
     $scope.serivceURL = URL.serivceURL;
     $scope.loggedIn = window.localStorage.loggedIn!=undefined?window.localStorage.loggedIn:false;
 
