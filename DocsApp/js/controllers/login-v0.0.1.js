@@ -11,7 +11,7 @@ docsApp.registerCtrl('loginController', function($scope, $http, $location, $root
     		'gender':$scope.user.gender,
     		'externalID':'chirag1'
     	}
-    	window.sessionStorage.userData = JSON.stringify($scope.userData);
+    	window.localStorage.userData = JSON.stringify($scope.userData);
     	$location.path('/chat');
     }
 });
