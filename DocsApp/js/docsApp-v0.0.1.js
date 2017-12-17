@@ -15,8 +15,8 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     }
     
     $scope.serivceURL = URL.serivceURL;
-    $scope.loggedIn = window.localStorage.userData!=undefined?window.localStorage.loggedIn:false;
-    // $scope.loggedIn = true;
+    // $scope.loggedIn = window.localStorage.userData!=undefined?window.localStorage.loggedIn:false;
+    $scope.loggedIn = true;
     $scope.chatBotID = '63906';
     $scope.externalID = 'chirag1';
     $scope.apiKey = '6nt5d1nJHkqbkphe';
