@@ -14,40 +14,19 @@ body {
     overflow-x: hidden;
     margin: 0 auto;
     width: 100%;
-    background:#f1f1f1;
+    background-image: url("../images/backgroundLogo_laptop.png");
+    background-repeat: repeat;
 }
-.mainContainer {
-    width: 100%;
-}
-.mainContainer a {
-    text-decoration: none;
-}
-@media only screen and (min-width: 1200px) {
-    .mainContainer {
-        width: 1200px;
-        margin: 0 auto;
-    }
-}
-.landscape {
-    display: none;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    min-height: 425px;
-    overflow: hidden;
-    background: rgb(173,255,47);
-}
-.landscape img {
-    width: 100%;
-}
-/*@media (max-width: 425px) and (orientation: landscape){
-    .landscape{
-        display: block;
-    }
+@media only screen and (max-width: 768px) {
     body {
-        overflow:hidden;
+        background-image: url("../images/backgroundLogo_tablet.png");
     }
-}*/
+}
+@media only screen and (max-width: 425px) {
+    body {
+        background-image: url("../images/backgroundLogo_mobile.png");
+    }
+}
 body::-webkit-scrollbar {
     width: 3px;
 }
@@ -65,17 +44,6 @@ div::-webkit-scrollbar-track {
 }
 div::-webkit-scrollbar-thumb {
     background-color: #aaa;
-}
-a {
-    text-decoration: none;
-    color: #000000;
-}
-a:-webkit-any-link {
-    color: #000000;
-}
-a, button, input[type="button"], input[type="submit"] {
-    cursor: pointer;
-    outline: none;
 }
 select {
     -webkit-border-radius: 0px;
@@ -119,7 +87,7 @@ select::-ms-expand {
     z-index: 100;
     margin: 0;
     position: fixed;
-    top: 40%;
+    top: 50%;
     padding: 5px;
     text-align: center;
     left: 50%;
@@ -135,13 +103,13 @@ select::-ms-expand {
     overflow-y: auto;
 }
 .ng-modal-header,
-.ng-modal-dialog h4, .ng-modal-dialog header {
+.ng-modal-dialog h4 {
     color: black;
     padding-bottom: 10px;
     font-weight: 500;
     font-size: 24px;
     line-height: 20px;
-    margin-bottom: 15px;
+    margin: 10px 0;
     text-align: center;
 }
 .ng-modal-content {
@@ -178,19 +146,16 @@ select::-ms-expand {
 .ng-modal-dialog .error {
     color: #bd4931 !important;
 }
-.ng-modal-dialog ul {
-    font-size: 14px;
-    width: 90%;
-    margin: 10px auto;
-    line-height: 1.3;
-    color: black;
-    text-align: justify;
-}
-.ng-modal-dialog input {
+.ng-modal-dialog input,  .ng-modal-dialog select{
     border: none !important;
-    height: 30px;
+    height: 35px;
     width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.ng-modal-dialog input::-webkit-input-placeholder {
+    color: #bcbcbc;
 }
 .ng-modal-dialog button {
     background: #ffd83d;
@@ -203,47 +168,9 @@ select::-ms-expand {
     min-width: 100px;
     padding: 0 10px;
 }
-.ng-modal-dialog a {
-    color: #3498ff;
-    font-size: 14px;
-    text-decoration: underline;
-}
-.ng-modal-dialog input[type=checkbox] {
-    display: none;
-}
-.ng-modal-dialog label {
-    cursor: pointer;
-}
-.ng-modal-dialog label:before {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-right: 10px;
-    position: relative;
-    bottom: 1px;
-    background-color: #fff;
-    border: 1px solid #a8a8a8;
-    font-size: 16px;
-    margin-bottom: -5px;
-}
-.ng-modal-dialog input[type=checkbox]:checked + label:before {
-    content: "\2713";
-    font-size: 12px;
-    color: #ffd83d;
-    text-align: center;
-    line-height: 17px;
-    font-weight: bold;
-    width: 15px;
-    height: 15px;
-    background: #627078;
-}
-.ng-modal-dialog input::-webkit-input-placeholder {
-    color: #bcbcbc;
-}
 /*modal popup css c2c ends*/
 
-/*scroll up css*/
+/*scroll down css*/
 .lnkScrollUp {
     width: 36px;
     height: 36px;
@@ -271,18 +198,9 @@ select::-ms-expand {
     filter: alpha(opacity=60);
 }
 .lnkScrollUp {
-    background: url(../images/scroll_up.png) no-repeat;
+    background: url(../images/scrolldown.png) no-repeat;
 }
 /*scroll up css ends*/
-
-/*loader css*/
-.loader-gif {
-    background: transparent url("../images/loader-shopby.gif") no-repeat scroll;
-    font-size: 0;
-    width: 54px;
-    height: 55px;
-}
-/*loader css ends*/
 
 /*header csss*/
 .header {
@@ -310,17 +228,7 @@ select::-ms-expand {
 }
 /*header css ends*/
 /*Footer Css*/
-.footerEndContainer2 {
-    background: #4e5960;
-    padding: 15px;
-}
-.copyrightFooter {
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.67;
-    color: white;
-    letter-spacing: 0.5px;
-}
+
 /*Footer Css Ends*/
 .mar-top-30 {
     margin-top: 30px;
@@ -338,29 +246,10 @@ select::-ms-expand {
 .pad0 {
     padding:0;
 }
-.side-button {
-    width: 120px;
-    height: 35px;
-    border: 1px solid #989898;
-    color: #989898;
-    background: white;
-    font-size: 16px;
-    margin: 10px;
-}
-.main-button {
-    width: 120px;
-    height: 35px;
-    border: none;
-    background: #ffd83d;
-    font-size: 16px;
-    margin: 10px;
-}
-.order-date-picker {
-    background: #fff url(../images/dateIcon.png) no-repeat 95% center;
-    background-size: 18px 18px !important;
-    cursor:pointer;
-}
 select{
     background: white  url(../images/Dropdown-yellow.png) no-repeat 95% 56%;
     background-size: 20px;
+}
+input::-webkit-input-placeholder {
+    color: #bcbcbc;
 }

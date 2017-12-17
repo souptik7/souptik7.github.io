@@ -1,0 +1,41 @@
+.loginDiv {
+	width: 75%;
+    margin-left: 15%;
+    top: 15%;
+    position: fixed;
+    text-align: center;
+}
+.loginDiv h4 {
+    color: black;
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 20px;
+    margin: 25px 0;
+    text-align: center;
+}
+.loginDiv .error {
+    color: #bd4931 !important;
+}
+.loginDiv input,  .loginDiv select{
+    border: 1px solid #a9a9a9 !important;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 25px;
+    outline: none;
+}
+.loginDiv input::-webkit-input-placeholder {
+    color: #bcbcbc;
+}
+.loginDiv button {
+    background: #ffd83d;
+    color: black;
+    font-size: 18px;
+    line-height: 1.11;
+    height: 40px;
+    border: 2px solid white;
+    margin: 15px;
+    min-width: 100px;
+    padding: 0 10px;
+}

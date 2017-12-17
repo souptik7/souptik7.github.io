@@ -1,4 +1,4 @@
-<modal-dialog show='!loggedIn' width='500px'>
+<div class="loginDiv">
 	<h4>Welcome to DocsApp</h4>
 	<form name="loginForm" id="loginForm" ng-submit="loginForm.$valid && startConsultation()" novalidate accessible-form>
 		<input type="text" ng-model="firstName" placeholder="Enter your First Name here *" maxlength="32" allow-pattern="[a-zA-Z]" required ng-required="true">
@@ -11,4 +11,4 @@
 		</select>
 		<button type="submit">Talk to Doctor</button>
 	</form>
-</modal-dialog>
+</div>
