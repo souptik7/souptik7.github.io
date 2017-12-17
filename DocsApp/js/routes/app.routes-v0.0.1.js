@@ -1,3 +1,6 @@
+docsApp.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
 docsApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$sceDelegateProvider','URL', function($routeProvider, $locationProvider, $controllerProvider, $sceDelegateProvider,URL) {
     $locationProvider.html5Mode(true);
     docsApp.registerCtrl = $controllerProvider.register;
