@@ -14,7 +14,7 @@ findApp.config(['$routeProvider', '$locationProvider', '$controllerProvider', '$
             return deferred.promise;
         }
     };
-    // $locationProvider.hashPrefix('');
+    $locationProvider.hashPrefix('');
     var hostName = URL.getURL(window.location.hostname).serviceURL;
     URL.baseURL = window.location.protocol +"//"+ window.location.hostname+'/souptik7.github.io/FEproblem1/';
     URL.serivceURL = 'https://findfalcone.herokuapp.com/';

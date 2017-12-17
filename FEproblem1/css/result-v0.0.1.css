@@ -1,0 +1,41 @@
+.search-container {
+	background: white;
+	min-height: 489px;
+    margin: 2% 8%;
+    border-radius: 10px;
+    padding: 15px;
+}
+.search-container2 {
+    margin: 0 8%;
+}
+@media only screen and (max-width: 800px) {
+	.search-container {
+	    margin: 25px 4%;
+	}
+    .search-container2 {
+        margin: 0 4%;
+    }
+}
+@media only screen and (min-width: 800px) {
+	.col-lg-offset {
+		margin-left: 16%;
+	}
+}
+.search-container h3 {
+	font-size: 20px;
+    color: #627978;
+    line-height: 35px;
+}
+.search-container span {
+    color: #627978;
+}
+.button-div {
+    position: absolute;
+    top: 325px;
+}
+.search-container2-h3 {
+    font-size: 18px;
+}
+.mar-top-100 {
+	margin-top: 100px;
+}
