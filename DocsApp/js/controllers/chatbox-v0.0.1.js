@@ -1,6 +1,7 @@
 docsApp.registerCtrl('chatController', function($scope, $http, $location, $rootScope) {
 	$scope.userData = JSON.parse(window.localStorage.userData);
 	$scope.chat = {};
+    $scope.loggedIn = window.localStorage.userData!=undefined?true:false;
 	$scope.chatData = window.localStorage.chatData != undefined?JSON.parse(window.localStorage.chatData):[];
     $scope.sendMessage = function(){
     	// var date = new Date();
