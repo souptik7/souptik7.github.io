@@ -8,7 +8,7 @@ docsApp.registerCtrl('chatController', function($scope, $http, $location, $rootS
     $scope.sendMessage = function(){
         if($scope.chat.messsage ==  undefined || $scope.chat.messsage == '') return;
         addChatData('user',$scope.chat.messsage);
-        if($scope.chatData.length == 0){
+        if($scope.chatData.length > 1){
             $http.get($scope.serivceURL + '?apiKey=' + $scope.apiKey + '&chatBotID=' + $scope.chatBotID + '&message=' + $scope.chat.messsage + '&externalID=' + $scope.externalID + '&firstName=' + $scope.userData.firstName + '&lastName=' + $scope.userData.lastName +'&gender=' + $scope.userData.gender)
             .then(function(data){
                 console.log(data);
@@ -30,6 +30,7 @@ docsApp.registerCtrl('chatController', function($scope, $http, $location, $rootS
         }
         $scope.chatData.push(data);
         window.localStorage.chatData = JSON.stringify($scope.chatData);
+        $scope.chat.messsage = '';
         $scope.scrollToBottom();
     }
 });
