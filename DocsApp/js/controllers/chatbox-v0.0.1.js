@@ -30,7 +30,7 @@ docsApp.registerCtrl('chatController', function($scope, $http, $location, $rootS
         }
         $scope.chatData.push(data);
         window.localStorage.chatData = JSON.stringify($scope.chatData);
-        $scope.chat.messsage = '';
+        $scope.chat = {};
         $scope.scrollToBottom();
     }
 });
