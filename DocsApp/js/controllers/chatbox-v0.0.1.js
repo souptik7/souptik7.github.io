@@ -28,6 +28,7 @@ docsApp.registerCtrl('chatController', function($scope, $http, $location, $rootS
             'message':message
         }
         $scope.chatData.push(data);
+        $scope.scrollToBottom();
         window.localStorage.chatData = JSON.stringify($scope.chatData);
     }
 });
