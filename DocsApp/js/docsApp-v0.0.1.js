@@ -26,13 +26,10 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
             $("html,body").animate({
                 scrollTop: $(document).height()
             }, 1000);
-            console.log($(this).height() - $(this).scrollTop());
         });
-        // console.log($(this).height() - $(this).scrollTop());
     }
 
     $(window).scroll(function() {
-        console.log($(this).height() - $(this).scrollTop());
         if (($(this).height() - $(this).scrollTop()) > 900) {
             $('.goToTop').fadeIn();
         } else {
