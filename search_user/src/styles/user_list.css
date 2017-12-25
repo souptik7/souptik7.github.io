@@ -1,0 +1,43 @@
+.coverDivList {
+	min-height: 400px;
+	text-align: center;
+    background: white;
+    box-shadow: 0px 3px 4px 0 rgba(0,0,0,0.1);
+    width: 100%;
+    float: left;
+    margin: 30px auto;
+    border-radius: 5px;
+    margin-top: 0;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+.coverDivList_div {
+	text-align: left;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0px 20px 0 20px;
+    cursor: pointer;
+}
+.coverDivList_span {
+    font-size: 20px;
+    color: #627078;
+}
+.coverDivList_img {
+	width: 50%;
+    /*margin-left: 25%;*/
+}
+.img_div {
+	text-align: center;
+}
+.text_div {
+	text-align: center;
+}
+li {
+	width: 33.3%;
+    float: left;
+}
+.coverDivList_div:hover {
+	border:1px solid #ffd83d;
+}
