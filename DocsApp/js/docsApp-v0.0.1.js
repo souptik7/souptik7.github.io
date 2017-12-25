@@ -10,6 +10,32 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     } else {
         $scope.screenSize = 'laptop';
     }
+
+    var toUTCDate = function(date) {
+        var _utc = new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), date.getUTCHours(), date.getUTCMinutes(), date.getUTCSeconds());
+        return _utc;
+    };
+    var millisToUTCDate = function(millis) {
+        return toUTCDate(new Date(millis));
+    };
+    $scope.toUTCDate = toUTCDate;
+    $scope.millisToUTCDate = millisToUTCDate;
+
+    $scope.scrollToBottom = function() {
+        $(document).ready(function() {
+            $("html,body").animate({
+                scrollTop: $(document).height()
+            }, 1000);
+        });
+    }
+
+    $(window).scroll(function() {
+        if (($(this).height() - $(this).scrollTop()) > 900) {
+            $('.goToTop').fadeIn();
+        } else {
+            $('.goToTop').fadeOut();
+        }
+    });
     
     $scope.serivceURL = URL.serivceURL;
     $scope.loggedIn = window.localStorage.userData!=undefined?true:false;
@@ -17,12 +43,12 @@ docsApp.controller('mainController', function($scope, $http, $location, URL, $ro
     $scope.externalID = 'chirag1';
     $scope.apiKey = '6nt5d1nJHkqbkphe';
     
-    if($scope.loggedIn){
-        $location.path('/chat');
+    if($scope.screenSize == 'mobile' && $scope.loggedIn == false){
+        $location.path('/login');
     }
 
-    if($scope.screenSize == 'mobile'){
-        $location.path('/login');
+    if($scope.loggedIn){
+        $location.path('/chat');
     }
 
 });

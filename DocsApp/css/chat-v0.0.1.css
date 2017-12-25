@@ -1,0 +1,93 @@
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 95%;
+    margin-left: 2.5%;
+    height: 60px;
+}
+footer textarea {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.3);
+    padding: 10px;
+    padding-right: 6%;
+    outline: none;
+}
+.sendIcon {
+    font-size: 40px;
+    color: rgb(38, 166, 154);
+    position: relative;
+    top: -53px;
+    left: 96%;
+    cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+    .sendIcon {
+        left: 92%;
+    }
+    footer textarea {
+        padding-right: 18%;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .sendIcon {
+        left:86%;
+    }
+    footer textarea {
+        padding-right: 14%;
+    }
+}
+.noChatDiv {
+    min-height: 50px;
+    background: whitesmoke;
+    width: 95%;
+    border-radius: 10px;
+    padding: 13px;
+    line-height: 1.5;
+    margin: 10px 0;
+    margin-left: 2.5%;
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.3);
+    color: #627078;
+    text-align: center;
+    font-size: 18px;
+}
+.noChatDiv p {
+    margin: 0;
+}
+.chatDiv {
+    min-height: 50px;
+    background: white;
+    max-width: 75%;
+    border-radius: 10px;
+    padding: 13px;
+    line-height: 1.5;
+    margin: 10px 0;
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.3);
+    color: #627078;
+    font-size: 18px;
+}
+.chatDiv p {
+    margin: 0;
+}
+.chatDiv span {
+    font-size: 12px;
+}
+.docChat {
+    float: left;
+    text-align: left;
+    margin-left: 2.5%;
+}
+.userChat {
+    float: right;
+    text-align: right;
+    margin-right: 2.5%;
+}
+.fullWidthDiv {
+    width: 100%;
+    float: left;
+}
+.chatBody {
+    margin-top: 65px;
+    bottom: 65px;
+    position: relative;
+}

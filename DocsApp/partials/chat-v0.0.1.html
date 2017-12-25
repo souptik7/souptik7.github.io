@@ -1,8 +1,18 @@
-<div>
-	<p></p>
+<div class="positionFixDiv">
+	<div ng-if="chatData.length == 0" class="noChatDiv">
+		<p>Doctor is available for chat or call consultation. Do you have any health queries?</p>
+	</div>
+	<div class="chatBody">
+		<div class="fullWidthDiv" ng-repeat='chat in chatData track by $index'>
+			<div class="chatDiv" ng-class="{'userChat':chat.author == 'user','docChat':chat.author == 'doc'}">
+				<p>{{chat.message}}</p>
+				<span>{{millisToUTCDate(chat.time) | date:'dd MMM yyyy hh:mm a'}}</span>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer ng-if="loggedIn">
 	<textarea ng-model="chat.messsage" placeholder="Type your message here"></textarea>
-	<img ng-src="images/send.png" ng-click="sendMessage()">
+	<i class="fa fa-paper-plane sendIcon" aria-hidden="true" ng-click="sendMessage()"></i>
 </footer>

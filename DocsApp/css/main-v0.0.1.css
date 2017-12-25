@@ -176,7 +176,7 @@ select::-ms-expand {
     height: 36px;
     position: fixed;
     bottom: 50px;
-    left: 10px!important;
+    left: 10px !important;
     border: none;
     display: block;
     text-indent: -9999px;
@@ -187,18 +187,19 @@ select::-ms-expand {
     position: fixed;
     width: 36px;
     height: 36px;
-    bottom: 0;
+    bottom: 65px;
     left: 0;
     z-index: 10;
     cursor: pointer;
     margin: 10px;
+    margin-left: 2.5%;
     -moz-opacity: 0.60;
     outline: none;
     opacity: .60;
     filter: alpha(opacity=60);
 }
 .lnkScrollUp {
-    background: url(../images/scrolldown.png) no-repeat;
+    background: url(../images/scroll_down.png) no-repeat;
 }
 /*scroll up css ends*/
 
@@ -215,47 +216,7 @@ header h2 {
     font-size: 26px;
 }
 /*header css ends*/
-/*Footer Css*/
-footer {
-    position: fixed;
-    bottom: 5px;
-    width: 95%;
-    margin-left: 2.5%;
-    height: 60px;
-}
-footer textarea {
-    width: 100%;
-    height: 60px;
-    box-shadow: 0px 0px 5px 0 rgba(0,0,0,0.3);
-    padding: 10px;
-    padding-right: 6%;
-    outline: none;
-}
-footer img {
-    height: 56px;
-    width: 56px;
-    position: relative;
-    top: -60px;
-    left: 94%;
-    cursor: pointer;
-}
-@media only screen and (max-width: 768px) {
-    footer img {
-        left: 90%;
-    }
-    footer textarea {
-        padding-right: 10%;
-    }
-}
-@media only screen and (max-width: 425px) {
-    footer img {
-        left:80%;
-    }
-    footer textarea {
-        padding-right: 20%;
-    }
-}
-/*Footer Css Ends*/
+
 .mar-top-30 {
     margin-top: 30px;
 }
