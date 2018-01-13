@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="jobApp" ng-controller="mainController" >
+	<head>
+		<base href="/IntuitCodingChallenge/">
+		<title>Find A Job</title>
+	    <meta name="description" content="Find A Job" />
+	    <meta name="keywords" content="Find A Job" />
+		<meta name="title" content="Find A Job">
+		<meta name="author" content="Souptik Chatterjee">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+
+	    <link rel="stylesheet" href="css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="css/main-v0.0.1.css" />
+
+	</head>
+	<body class="ng-layout" ng-cloak>
+	    <loading></loading>
+
+	    <div header-directive></div>
+	    <ng-view ng-cloak></ng-view>
+	    <div footer-directive></div>
+
+	</body>
+	<script type="text/javascript" src="js/sources/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/sources/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/sources/angular.min.js"></script>
+	<script type="text/javascript" src="js/sources/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/sources/angular-css.min.js"></script>
+	<script type="text/javascript" src="js/sources/scriptjs.js"></script>
+	<script type="text/javascript" src="js/jobApp-v0.0.1.js"></script>
+	<script type="text/javascript" src="js/routes/app.constants-v0.0.1.js"></script>
+	<script type="text/javascript" src="js/routes/app.routes-v0.0.1.js"></script>
+	<script type="text/javascript" src="js/directives/directive-v0.0.1.js"></script>
+</html>

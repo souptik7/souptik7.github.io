@@ -1,0 +1,120 @@
+.search-container {
+    background: white;
+    min-height: 489px;
+    margin: 2% 8%;
+    border-radius: 10px;
+    padding: 15px
+}
+
+.search-container2 {
+    margin: 0 8%
+}
+
+@media only screen and (max-width: 800px) {
+    .search-container {
+        margin: 25px 4%
+    }
+    .search-container2 {
+        margin: 0 4%
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .col-lg-offset {
+        margin-left: 16%
+    }
+}
+
+.search-container h3 {
+    font-size: 20px;
+    color: #627978
+}
+
+.search-container span {
+    color: #627978
+}
+
+.mar-top-20 {
+    margin-top: 20px
+}
+
+.search-select {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    color: #797979;
+    outline: none;
+    cursor: pointer;
+    margin: 10px 0
+}
+
+input[type=radio] {
+    -webkit-appearance: none
+}
+
+.custom-radio-css {
+    margin: 3px 0
+}
+
+.custom-radio-css label {
+    cursor: pointer;
+    padding-left: 5px
+}
+
+.custom-radio-css input[type=radio]+label:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 0px;
+    border: 1px solid #989898;
+    border-radius: 100%;
+    cursor: pointer
+}
+
+.custom-radio-css input[type=radio]:checked+label:before {
+    border: 1px solid #3498ff
+}
+
+.custom-radio-css input[type=radio] + label span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    float: left;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    cursor: pointer
+}
+
+.custom-radio-css input[type=radio]:checked+label span {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 19px;
+    background: #3498ff
+}
+
+.disabled-label {
+    opacity: 0.5
+}
+
+.button-div {
+    position: absolute;
+    top: 325px
+}
+
+.search-container2-h3 {
+    font-size: 18px
+}
+
+.errorCode {
+    font-size: 14px;
+    color: #bd4931
+}
+.pos-spc {
+    position: absolute;
+    top: 350px;
+}

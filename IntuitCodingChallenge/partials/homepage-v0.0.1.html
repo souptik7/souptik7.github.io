@@ -1,0 +1,36 @@
+<div class="search-container box-shadow col-lg-10 floatl pad0">
+	<div class="col-lg-12 floatl text-center">
+		<h3>Select places you want to find a job in :</h3>
+		<form name="searchForm" id="searchForm" ng-submit="searchForm.$valid && findJob()" novalidate accessible-form>
+			<div class="col-lg-3 floatl text-left mar-top-20 pad0" ng-repeat="item in [].constructor(4) track by $index">
+				<div class="col-lg-12 floatl text-left">
+					<span>Destination {{$index+1}} :</span>
+					<select ng-model="find.city[$index]" class="search-select" ng-change="getCities($index)" required>
+						<option disabled selected value="">Select</option>
+						<option ng-repeat="city in cities[$index]" value={{city}}>{{city.name}}</option>
+					</select>
+				</div>
+				<div class="col-lg-12 floatl text-left" ng-if="showVehicles[$index] == true">
+					<div><span>Transport {{$index+1}} :</span><br><br></div>
+					<div class="col-lg-12 floatl text-left custom-radio-css" ng-repeat="vehicle in vehicles[$index] track by $index" ng-class="{'disabled-label':vehicle.total_no <= 0 && find.vehicle[$parent.$index] != vehicle.name}">
+						<input type="radio" id={{vehiclesRadio[$parent.$index].ids[$index]}} name={{vehiclesRadio[$parent.$index].name}} value={{vehicle.name}} ng-model="find.vehicle[$parent.$index]" ng-click="getVehicles($parent.$index,$index)" ng-disabled="vehicle.total_no <= 0" required>
+						<label for={{vehiclesRadio[$parent.$index].ids[$index]}}><span></span>{{vehicle.name}} ({{vehicle.total_no}})</label>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 floatl text-left pad0 pos-spc">
+				<div class="col-lg-12 floatl text-center">
+					<h3 class="search-container2-h3" ng-if="totalTime > 0">Time Spent on Travel : {{totalTime}} Hrs</h3>
+				</div>
+				<div class="col-lg-12 floatl text-center">
+					<button value="submit" class="main-button">Find a Job</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<modal-dialog show="tokenError">
+	<h4>Error</h4>
+	<p>Authorization token has expired. Please start again.</p>
+	<button type="button" ng-click="load()">Start Again</button>
+</modal-dialog>

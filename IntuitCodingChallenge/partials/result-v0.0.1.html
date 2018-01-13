@@ -1,0 +1,11 @@
+<div class="search-container box-shadow col-lg-10 floatl pad0">
+	<div class="col-lg-12 floatl mar-top-100 text-center">
+		<h3 ng-if="resultData.status == 'success'">Success! Congratulations on finding a job !<br>Time spent on travel: {{totalTime}}<br>Job found in city: {{resultData.city_name}}</h3>
+		<h3 ng-if="resultData.status == 'false'">You have failed in finding a job !</h3>
+	</div>
+	<div class="col-lg-12 floatl text-left pad0">
+		<div class="col-lg-12 floatl text-center">
+			<button value="submit" class="main-button" ng-click="gotoHomePage()">Start Again</button>
+		</div>
+	</div>
+</div>
